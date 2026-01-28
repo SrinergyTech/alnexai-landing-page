@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Footer() {
+  //footer
   return (
     <footer className="bg-gray-900 dark:bg-black text-gray-300 dark:text-gray-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
