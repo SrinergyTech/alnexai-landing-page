@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Navigation from '@/components/Navigation'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Alnex.ai - Smart Mortgage Solutions',
-  description: 'Transform your mortgage experience with AI-powered solutions. Get the best rates, faster approvals, and personalized guidance.',
+  title: 'Alnex.ai – AI-Powered Mortgage Underwriting Platform',
+  description:
+    'Alnex.ai delivers AI-powered mortgage underwriting for lenders, banks, and credit unions with 99.2% accuracy, full audit trails, and SOC 2-grade security.',
 }
 
 export default function RootLayout({
@@ -15,24 +15,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                const theme = localStorage.getItem('theme');
-                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                const isDark = theme ? theme === 'dark' : prefersDark;
-                if (isDark) {
-                  document.documentElement.classList.add('dark');
-                }
-              })();
-            `,
-          }}
-        />
-      </head>
-      <body className={inter.className}>{children}</body>
+    <html lang="en">
+      <body className="font-sans bg-navy-950 text-navy-100">
+        <div className="relative min-h-screen flex flex-col">
+          <Navigation />
+          <main className="flex-1 pt-20">{children}</main>
+          <Footer />
+        </div>
+      </body>
     </html>
   )
 }
