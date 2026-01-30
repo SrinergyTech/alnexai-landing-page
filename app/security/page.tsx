@@ -437,12 +437,12 @@ export default function SecurityPage() {
       >
         <motion.div
           variants={fadeInUp}
-          className="glass-card-hover flex flex-col gap-4 bg-gradient-to-r from-navy-900/90 via-navy-900/95 to-navy-900/90 px-6 py-8 sm:px-8 md:flex-row md:items-center md:gap-6"
+          className="glass-card-hover flex flex-col gap-4 bg-gradient-to-r from-white via-white/95 to-white/90 dark:from-navy-900/90 dark:via-navy-900/95 dark:to-navy-900/90 px-6 py-8 sm:px-8 md:flex-row md:items-center md:gap-6"
         >
           <div className="flex-[6] space-y-3">
             <p className="section-heading">Questions About Security?</p>
-            <h2 className="heading-md text-navy-50">Work directly with our security team</h2>
-            <p className="text-sm text-navy-300">
+            <h2 className="heading-md text-navy-900 dark:text-navy-50">Work directly with our security team</h2>
+            <p className="text-sm text-navy-600 dark:text-navy-300">
               We regularly collaborate with security, risk, and compliance stakeholders at mortgage firms. Share your
               requirements and we&apos;ll walk through how Alnex.ai fits your security needs.
             </p>
