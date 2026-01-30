@@ -455,7 +455,7 @@ export default function Home() {
       >
         <motion.div
           variants={fadeInUp}
-          className="glass-card-hover flex flex-col items-start gap-6 overflow-hidden bg-gradient-to-r from-navy-900/80 via-navy-900/90 to-navy-900/80 px-6 py-8 sm:px-8 lg:flex-row lg:items-center lg:justify-between"
+          className="glass-card-hover flex flex-col items-start gap-6 overflow-hidden bg-gradient-to-r from-blue-50 via-white to-blue-50 dark:from-navy-900/80 dark:via-navy-900/90 dark:to-navy-900/80 px-6 py-8 sm:px-8 lg:flex-row lg:items-center lg:justify-between"
         >
           <div className="max-w-xl space-y-3">
             <p className="section-heading">Get started</p>

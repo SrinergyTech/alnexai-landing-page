@@ -54,7 +54,7 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <span className="font-display text-xl font-bold tracking-tight text-navy-900 dark:text-navy-50">
-              Alnex<span className="gradient-text align-top text-base">.ai</span>
+              AlNex<span className="gradient-text align-top text-base">.ai</span>
             </span>
           </Link>
 

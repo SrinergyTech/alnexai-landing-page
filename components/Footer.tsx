@@ -11,14 +11,14 @@ export default function Footer() {
           <div className="space-y-4 md:col-span-2">
             <Link href="/" className="inline-flex items-baseline gap-1">
               <span className="font-display text-xl font-bold tracking-tight text-navy-900 dark:text-navy-50">
-                Alnex<span className="gradient-text align-top text-base">.ai</span>
+                AlNex<span className="gradient-text align-top text-base">.ai</span>
               </span>
             </Link>
             <p className="max-w-sm text-sm text-navy-600 dark:text-navy-300">
               AI-powered mortgage underwriting built for lenders, banks, and credit unions—focused on compliance,
               accuracy, and explainability.
             </p>
-            <div className="flex flex-wrap items-center gap-3 text-xs text-navy-600 dark:text-navy-300">
+            {/* <div className="flex flex-wrap items-center gap-3 text-xs text-navy-600 dark:text-navy-300">
               <span className="inline-flex items-center gap-1 rounded-full bg-navy-100/70 dark:bg-navy-900/70 px-3 py-1">
                 <Shield className="h-3.5 w-3.5 text-accent-600 dark:text-accent-400" />
                 SOC 2 Ready
@@ -27,7 +27,7 @@ export default function Footer() {
                 <Lock className="h-3.5 w-3.5 text-accent-600 dark:text-accent-400" />
                 GLBA Compliant
               </span>
-            </div>
+            </div> */}
           </div>
 
           <div className="space-y-4">

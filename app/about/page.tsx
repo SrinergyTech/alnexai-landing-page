@@ -2,7 +2,8 @@
 
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Target, Shield, Lightbulb, Users } from 'lucide-react'
+import { Target, Shield, Lightbulb, Users, Zap } from 'lucide-react'
+import Link from 'next/link'
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -25,11 +26,14 @@ function useSectionAnimation() {
 
 export default function AboutPage() {
   const hero = useSectionAnimation()
-  const problem = useSectionAnimation()
+  const video = useSectionAnimation()
+  const mission = useSectionAnimation()
   const values = useSectionAnimation()
-  const impact = useSectionAnimation()
-  const advisors = useSectionAnimation()
   const cta = useSectionAnimation()
+
+  // YouTube video ID - replace with your actual video ID
+  // Extract from URL: https://www.youtube.com/watch?v=VIDEO_ID
+  const youtubeVideoId = 'YGAlDbzdvEA'
 
   return (
     <div className="relative overflow-hidden">
@@ -44,212 +48,145 @@ export default function AboutPage() {
         variants={staggerContainer}
         initial="hidden"
         animate={hero.isInView ? 'visible' : 'hidden'}
-        className="mx-auto max-w-6xl px-4 pb-16 pt-10 sm:px-6 lg:px-8 lg:pt-16"
+        className="mx-auto max-w-5xl px-4 pb-20 pt-10 sm:px-6 lg:px-8 lg:pt-20"
       >
-        <motion.div variants={fadeInUp} className="max-w-3xl space-y-4">
-          <p className="section-heading">About Us</p>
-          <h1 className="heading-lg text-heading">
-            Transforming mortgage underwriting with intelligent automation
+        <motion.div variants={fadeInUp} className="mx-auto max-w-4xl space-y-6 text-center">
+          <div className="hero-badge mx-auto">
+            <Zap className="h-3.5 w-3.5 text-accent-light" />
+            Where loans move faster
+          </div>
+          <h1 className="heading-xl text-heading">
+            About <span className="gradient-text">Alnex</span>
           </h1>
-          <p className="text-sm text-muted md:text-base">
-            Alnex.ai was founded with a singular focus: help underwriting teams move faster without sacrificing
-            compliance, accuracy, or judgment. We combine multi-agent AI, deterministic calculators, and audit-grade
-            observability so every loan decision is both explainable and defensible.
+          <p className="mx-auto max-w-2xl text-base text-muted md:text-lg">
+            Alnex is a secure AI loan assistant that helps lenders and brokers simplify complex loan processes. 
+            We bring simplicity and intelligence to lending with an AI assistant for faster, clearer loan decisions.
           </p>
         </motion.div>
       </motion.section>
 
-      {/* Problem */}
+      {/* Video */}
       <motion.section
-        ref={problem.ref}
+        ref={video.ref}
         variants={staggerContainer}
         initial="hidden"
-        animate={problem.isInView ? 'visible' : 'hidden'}
-        className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8"
+        animate={video.isInView ? 'visible' : 'hidden'}
+        className="mx-auto max-w-5xl px-4 pb-24 sm:px-6 lg:px-8"
       >
-        <div className="grid gap-8 lg:grid-cols-2">
-          <motion.div variants={fadeInUp} className="space-y-4">
-            <p className="section-heading">The Problem</p>
-            <h2 className="heading-md text-heading">Mortgage underwriting is still too slow and opaque</h2>
-            <p className="text-sm text-muted">
-              Traditional underwriting workflows are fragmented across spreadsheets, LOS systems, manual document
-              review, and tribal policy knowledge. This creates delays, inconsistency, and risk—especially in high
-              volume or complex Non-QM portfolios.
-            </p>
-            <p className="text-sm text-navy-300">
-              Lenders need more than automation. They need underwriting intelligence that respects existing policies,
-              preserves human judgment, and stands up to regulatory scrutiny.
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={staggerContainer}
-            className="grid gap-4 sm:grid-cols-3"
-          >
-            {[
-              { label: 'Avg. manual underwriting time', value: '3–5 days' },
-              { label: 'Error rate in manual reviews', value: '15–20%' },
-              { label: 'Cost per loan file to underwrite', value: '$500+' },
-            ].map((item) => (
-              <motion.div
-                key={item.label}
-                variants={fadeInUp}
-                className="glass-card-hover flex flex-col justify-between p-4 text-sm"
-              >
-                <p className="text-xs text-muted">{item.label}</p>
-                <p className="mt-3 text-lg font-semibold text-heading">{item.value}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
+        <motion.div variants={fadeInUp} className="mx-auto max-w-4xl">
+          <div className="glass-card-hover overflow-hidden rounded-2xl p-2">
+            <div className="relative aspect-video w-full overflow-hidden rounded-xl">
+              <iframe
+                className="h-full w-full"
+                src={`https://www.youtube.com/embed/${youtubeVideoId}?rel=0&modestbranding=1`}
+                title="Alnex Product Marketing Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </motion.div>
       </motion.section>
 
-      {/* Mission & Values */}
+      {/* Mission */}
+      <motion.section
+        ref={mission.ref}
+        variants={staggerContainer}
+        initial="hidden"
+        animate={mission.isInView ? 'visible' : 'hidden'}
+        className="mx-auto max-w-5xl px-4 pb-24 sm:px-6 lg:px-8"
+      >
+        <motion.div variants={fadeInUp} className="mx-auto max-w-4xl space-y-6">
+          <div className="text-center">
+            <p className="section-heading">Our Mission</p>
+            <h2 className="heading-lg mt-4 text-heading">
+              Simplifying lending — with an AI assistant at the core
+            </h2>
+          </div>
+          
+          <div className="glass-card-hover mx-auto max-w-3xl space-y-4 p-8 md:p-10">
+            <p className="text-base leading-relaxed text-muted md:text-lg">
+              Alnex helps lending teams move beyond paper-driven and rule-bound workflows by embedding an AI assistant 
+              directly into the loan lifecycle.
+            </p>
+            <div className="space-y-3 pt-4">
+              <p className="text-sm font-medium text-heading">From intake to funding, Alnex:</p>
+              <ul className="space-y-2 text-sm text-muted">
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-accent-500" />
+                  <span>Understands loan documents and borrower data</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-accent-500" />
+                  <span>Applies policies and rules in real time</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-accent-500" />
+                  <span>Guides each file forward with clarity and consistency</span>
+                </li>
+              </ul>
+            </div>
+            <p className="pt-4 text-sm italic text-navy-300 md:text-base">
+              This is not just digitization. It&apos;s assisted decision-making at every step.
+            </p>
+          </div>
+        </motion.div>
+      </motion.section>
+
+      {/* Values / Company Pillars */}
       <motion.section
         ref={values.ref}
         variants={staggerContainer}
         initial="hidden"
         animate={values.isInView ? 'visible' : 'hidden'}
-        className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8"
+        className="mx-auto max-w-5xl px-4 pb-24 sm:px-6 lg:px-8"
       >
-        <motion.div variants={fadeInUp} className="mb-8 max-w-3xl">
-          <p className="section-heading">Mission & Values</p>
-          <h2 className="heading-md text-heading">Built around underwriting precision and trust</h2>
-          <p className="mt-3 text-sm text-muted">
-            Our mission is to give every underwriting team the tools to operate with the speed of automation and the
-            rigor of a credit committee—without compromising on governance or control.
+        <motion.div variants={fadeInUp} className="mb-12 text-center">
+          <p className="section-heading">Our Values</p>
+          <h2 className="heading-lg mt-4 text-heading">Company Pillars</h2>
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-muted">
+            The principles that guide everything we build and every decision we make
           </p>
         </motion.div>
 
         <motion.div
           variants={staggerContainer}
-          className="grid gap-6 md:grid-cols-2 lg:grid-cols-4"
+          className="grid gap-6 md:grid-cols-2"
         >
           {[
             {
               icon: Target,
               title: 'Precision',
-              desc: 'Every calculation, from DTI to DSCR, is deterministic, tested, and fully traceable.',
+              desc: 'Every calculation, from DTI to DSCR, is deterministic, tested, and fully traceable. Every decision is explainable, every number defensible.',
             },
             {
               icon: Shield,
               title: 'Trust',
-              desc: 'Explainable AI with complete audit trails, role-based access, and security-first design.',
+              desc: 'Explainable AI with complete audit trails, role-based access, and security-first design. Built for compliance and regulatory scrutiny.',
             },
             {
               icon: Lightbulb,
               title: 'Innovation',
-              desc: 'Modern AI agents purpose-built for income, credit, property, and compliance analysis.',
+              desc: 'Modern AI agents purpose-built for income, credit, property, and compliance analysis. Technology that moves lending forward.',
             },
             {
               icon: Users,
               title: 'Partnership',
-              desc: 'We co-design workflows with underwriting, risk, and compliance teams—not around them.',
+              desc: 'We co-design workflows with underwriting, risk, and compliance teams—not around them. Your success is our mission.',
             },
           ].map((item) => (
             <motion.div
               key={item.title}
               variants={fadeInUp}
-              className="glass-card-hover flex flex-col gap-3 p-5"
+              className="glass-card-hover flex flex-col gap-4 p-6 md:p-8"
             >
-              <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-accent-500/10 text-accent-300">
-                <item.icon className="h-5 w-5" />
+              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-tr from-accent-400/20 via-accent-500/30 to-accent-400/10 text-accent-light">
+                <item.icon className="h-6 w-6" />
               </div>
               <div>
-                <h3 className="text-sm font-semibold text-heading">{item.title}</h3>
-                <p className="mt-2 text-xs text-muted">{item.desc}</p>
+                <h3 className="text-lg font-semibold text-heading">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{item.desc}</p>
               </div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </motion.section>
-
-      {/* Impact metrics */}
-      <motion.section
-        ref={impact.ref}
-        variants={staggerContainer}
-        initial="hidden"
-        animate={impact.isInView ? 'visible' : 'hidden'}
-        className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8"
-      >
-        <motion.div
-          variants={fadeInUp}
-          className="glass-card-hover grid gap-6 p-6 sm:grid-cols-4"
-        >
-          {[
-            { label: 'Loans processed', value: '10,000+' },
-            { label: 'Lending partners', value: '50+' },
-            { label: 'Accuracy rate', value: '99.2%' },
-            { label: 'Time saved', value: '85%' },
-          ].map((item) => (
-            <div key={item.label}>
-              <p className="text-xs uppercase tracking-widest text-accent-400">{item.label}</p>
-              <p className="mt-2 text-xl font-semibold text-heading">{item.value}</p>
-            </div>
-          ))}
-        </motion.div>
-      </motion.section>
-
-      {/* Advisory board */}
-      <motion.section
-        ref={advisors.ref}
-        variants={staggerContainer}
-        initial="hidden"
-        animate={advisors.isInView ? 'visible' : 'hidden'}
-        className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8"
-      >
-        <motion.div variants={fadeInUp} className="mb-8 max-w-3xl">
-          <p className="section-heading">Advisory Board</p>
-          <h2 className="heading-md text-heading">Guided by lenders, risk, and compliance leaders</h2>
-          <p className="mt-3 text-sm text-muted">
-            Our advisors bring decades of experience across mortgage lending, credit risk, compliance, and enterprise
-            SaaS—helping us build a platform that fits real underwriting desks.
-          </p>
-        </motion.div>
-
-        <motion.div
-          variants={staggerContainer}
-          className="grid gap-6 md:grid-cols-3"
-        >
-          {[
-            {
-              name: 'Alex Martinez',
-              title: 'Former Head of Mortgage Underwriting',
-              company: 'Top-10 National Lender',
-              bio: 'Brings 20+ years of experience building underwriting teams, policies, and credit frameworks at scale.',
-            },
-            {
-              name: 'Priya Desai',
-              title: 'Chief Risk & Compliance Advisor',
-              company: 'Regulated Financial Institution',
-              bio: 'Specializes in GLBA, FCRA, and model risk management for AI-enabled credit decisioning systems.',
-            },
-            {
-              name: 'Michael Chen',
-              title: 'Enterprise Technology Advisor',
-              company: 'Cloud & Data Infrastructure',
-              bio: 'Helps align our architecture with enterprise security, data, and integration requirements.',
-            },
-          ].map((advisor) => (
-            <motion.div
-              key={advisor.name}
-              variants={fadeInUp}
-              className="glass-card-hover flex flex-col gap-3 p-5"
-            >
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-badge text-sm font-semibold text-accent-light">
-                  {advisor.name
-                    .split(' ')
-                    .map((n) => n[0])
-                    .join('')}
-                </div>
-                <div className="text-sm">
-                  <div className="font-semibold text-heading">{advisor.name}</div>
-                  <div className="text-[11px] text-muted">{advisor.title}</div>
-                  <div className="text-[11px] text-subtle">{advisor.company}</div>
-                </div>
-              </div>
-              <p className="text-xs text-muted">{advisor.bio}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -261,24 +198,24 @@ export default function AboutPage() {
         variants={staggerContainer}
         initial="hidden"
         animate={cta.isInView ? 'visible' : 'hidden'}
-        className="mx-auto max-w-6xl px-4 pb-20 sm:px-6 lg:px-8"
+        className="mx-auto max-w-5xl px-4 pb-24 sm:px-6 lg:px-8"
       >
         <motion.div
           variants={fadeInUp}
-          className="glass-card-hover flex flex-col items-start gap-4 bg-gradient-to-r from-navy-900/90 via-navy-900/95 to-navy-900/90 px-6 py-8 sm:px-8 md:flex-row md:items-center md:justify-between"
+          className="glass-card-hover flex flex-col items-center gap-6 bg-gradient-to-r from-navy-900/90 via-navy-900/95 to-navy-900/90 px-6 py-12 text-center sm:px-8 md:px-12"
         >
-          <div className="space-y-3">
-            <p className="section-heading">Partner with us</p>
-            <h2 className="heading-md text-navy-50">Join us in building the future of lending</h2>
-            <p className="text-sm text-navy-300">
-              Whether you&apos;re leading underwriting, risk, or technology, we&apos;d love to explore how Alnex.ai can
+          <div className="space-y-4">
+            <p className="section-heading">Get Started</p>
+            <h2 className="heading-md text-heading">Join us in building the future of lending</h2>
+            <p className="mx-auto max-w-xl text-sm text-muted md:text-base">
+              Whether you&apos;re leading underwriting, risk, or technology, we&apos;d love to explore how Alnex can 
               fit your stack and credit strategy.
             </p>
           </div>
-          <div className="flex justify-start">
-            <a href="https://mortiq.alnex.ai" target="_blank" rel="noopener noreferrer" className="btn-primary w-full justify-center sm:w-auto">
-              Get Started
-            </a>
+          <div className="flex justify-center">
+            <Link href="/contact" className="btn-primary w-full justify-center sm:w-auto">
+              Request a Demo
+            </Link>
           </div>
         </motion.div>
       </motion.section>
