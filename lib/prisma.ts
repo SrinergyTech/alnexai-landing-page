@@ -10,5 +10,13 @@ export const prisma =
     log: process.env.NODE_ENV === 'development' ? ['query', 'error', 'warn'] : ['error'],
   })
 
-if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma
+// Prevent multiple instances in production (Azure Static Web Apps)
+if (process.env.NODE_ENV !== 'production') {
+  globalForPrisma.prisma = prisma
+} else {
+  // In production, also use global to prevent multiple instances
+  if (!globalForPrisma.prisma) {
+    globalForPrisma.prisma = prisma
+  }
+}
 

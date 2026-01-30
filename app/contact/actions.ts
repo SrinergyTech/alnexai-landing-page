@@ -11,6 +11,15 @@ export interface DemoRequestInput {
 
 export async function submitDemoRequest(data: DemoRequestInput) {
   try {
+    // Check if DATABASE_URL is configured
+    if (!process.env.DATABASE_URL) {
+      console.error('DATABASE_URL is not configured')
+      return {
+        success: false,
+        error: 'Server configuration error. Please contact support.',
+      }
+    }
+
     // Validate that at least one field is provided
     if (!data.email?.trim() && !data.name?.trim() && !data.hearAboutUs?.trim()) {
       return {
@@ -31,6 +40,11 @@ export async function submitDemoRequest(data: DemoRequestInput) {
     return { success: true, data: demoRequest }
   } catch (error: any) {
     console.error('Error creating demo request:', error)
+    console.error('Error details:', {
+      code: error.code,
+      message: error.message,
+      meta: error.meta,
+    })
     
     // Provide more specific error messages
     let errorMessage = 'Failed to submit demo request. Please try again.'
@@ -39,8 +53,13 @@ export async function submitDemoRequest(data: DemoRequestInput) {
       errorMessage = 'Database connection error. Please check your configuration.'
     } else if (error.code === 'P2002') {
       errorMessage = 'A record with this information already exists.'
+    } else if (error.code === 'P1012') {
+      errorMessage = 'Database configuration error. Please contact support.'
     } else if (error.message) {
-      errorMessage = error.message
+      // Don't expose internal error messages to users in production
+      errorMessage = process.env.NODE_ENV === 'development' 
+        ? error.message 
+        : 'Failed to submit demo request. Please try again later.'
     }
     
     return {

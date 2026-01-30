@@ -33,7 +33,7 @@ export default function AboutPage() {
 
   // YouTube video ID - replace with your actual video ID
   // Extract from URL: https://www.youtube.com/watch?v=VIDEO_ID
-  const youtubeVideoId = 'YGAlDbzdvEA'
+  const youtubeVideoId = 'zqmvlrC0uyk'
 
   return (
     <div className="relative overflow-hidden">
@@ -202,7 +202,7 @@ export default function AboutPage() {
       >
         <motion.div
           variants={fadeInUp}
-          className="glass-card-hover flex flex-col items-center gap-6 bg-gradient-to-r from-navy-900/90 via-navy-900/95 to-navy-900/90 px-6 py-12 text-center sm:px-8 md:px-12"
+          className="glass-card-hover flex flex-col items-center gap-6 bg-gradient-to-r from-white via-white/95 to-white/90 px-6 py-12 text-center dark:from-navy-900/90 dark:via-navy-900/95 dark:to-navy-900/90 sm:px-8 md:px-12"
         >
           <div className="space-y-4">
             <p className="section-heading">Get Started</p>
