@@ -48,10 +48,10 @@ export default function AboutPage() {
       >
         <motion.div variants={fadeInUp} className="max-w-3xl space-y-4">
           <p className="section-heading">About Us</p>
-          <h1 className="heading-lg text-navy-50">
+          <h1 className="heading-lg text-heading">
             Transforming mortgage underwriting with intelligent automation
           </h1>
-          <p className="text-sm text-navy-300 md:text-base">
+          <p className="text-sm text-muted md:text-base">
             Alnex.ai was founded with a singular focus: help underwriting teams move faster without sacrificing
             compliance, accuracy, or judgment. We combine multi-agent AI, deterministic calculators, and audit-grade
             observability so every loan decision is both explainable and defensible.
@@ -70,8 +70,8 @@ export default function AboutPage() {
         <div className="grid gap-8 lg:grid-cols-2">
           <motion.div variants={fadeInUp} className="space-y-4">
             <p className="section-heading">The Problem</p>
-            <h2 className="heading-md text-navy-50">Mortgage underwriting is still too slow and opaque</h2>
-            <p className="text-sm text-navy-300">
+            <h2 className="heading-md text-heading">Mortgage underwriting is still too slow and opaque</h2>
+            <p className="text-sm text-muted">
               Traditional underwriting workflows are fragmented across spreadsheets, LOS systems, manual document
               review, and tribal policy knowledge. This creates delays, inconsistency, and risk—especially in high
               volume or complex Non-QM portfolios.
@@ -96,8 +96,8 @@ export default function AboutPage() {
                 variants={fadeInUp}
                 className="glass-card-hover flex flex-col justify-between p-4 text-sm"
               >
-                <p className="text-xs text-navy-300">{item.label}</p>
-                <p className="mt-3 text-lg font-semibold text-navy-50">{item.value}</p>
+                <p className="text-xs text-muted">{item.label}</p>
+                <p className="mt-3 text-lg font-semibold text-heading">{item.value}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -114,8 +114,8 @@ export default function AboutPage() {
       >
         <motion.div variants={fadeInUp} className="mb-8 max-w-3xl">
           <p className="section-heading">Mission & Values</p>
-          <h2 className="heading-md text-navy-50">Built around underwriting precision and trust</h2>
-          <p className="mt-3 text-sm text-navy-300">
+          <h2 className="heading-md text-heading">Built around underwriting precision and trust</h2>
+          <p className="mt-3 text-sm text-muted">
             Our mission is to give every underwriting team the tools to operate with the speed of automation and the
             rigor of a credit committee—without compromising on governance or control.
           </p>
@@ -156,8 +156,8 @@ export default function AboutPage() {
                 <item.icon className="h-5 w-5" />
               </div>
               <div>
-                <h3 className="text-sm font-semibold text-navy-50">{item.title}</h3>
-                <p className="mt-2 text-xs text-navy-300">{item.desc}</p>
+                <h3 className="text-sm font-semibold text-heading">{item.title}</h3>
+                <p className="mt-2 text-xs text-muted">{item.desc}</p>
               </div>
             </motion.div>
           ))}
@@ -184,7 +184,7 @@ export default function AboutPage() {
           ].map((item) => (
             <div key={item.label}>
               <p className="text-xs uppercase tracking-widest text-accent-400">{item.label}</p>
-              <p className="mt-2 text-xl font-semibold text-navy-50">{item.value}</p>
+              <p className="mt-2 text-xl font-semibold text-heading">{item.value}</p>
             </div>
           ))}
         </motion.div>
@@ -200,8 +200,8 @@ export default function AboutPage() {
       >
         <motion.div variants={fadeInUp} className="mb-8 max-w-3xl">
           <p className="section-heading">Advisory Board</p>
-          <h2 className="heading-md text-navy-50">Guided by lenders, risk, and compliance leaders</h2>
-          <p className="mt-3 text-sm text-navy-300">
+          <h2 className="heading-md text-heading">Guided by lenders, risk, and compliance leaders</h2>
+          <p className="mt-3 text-sm text-muted">
             Our advisors bring decades of experience across mortgage lending, credit risk, compliance, and enterprise
             SaaS—helping us build a platform that fits real underwriting desks.
           </p>
@@ -237,19 +237,19 @@ export default function AboutPage() {
               className="glass-card-hover flex flex-col gap-3 p-5"
             >
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-navy-900/70 text-sm font-semibold text-accent-300">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-badge text-sm font-semibold text-accent-light">
                   {advisor.name
                     .split(' ')
                     .map((n) => n[0])
                     .join('')}
                 </div>
                 <div className="text-sm">
-                  <div className="font-semibold text-navy-50">{advisor.name}</div>
-                  <div className="text-[11px] text-navy-300">{advisor.title}</div>
-                  <div className="text-[11px] text-navy-400">{advisor.company}</div>
+                  <div className="font-semibold text-heading">{advisor.name}</div>
+                  <div className="text-[11px] text-muted">{advisor.title}</div>
+                  <div className="text-[11px] text-subtle">{advisor.company}</div>
                 </div>
               </div>
-              <p className="text-xs text-navy-300">{advisor.bio}</p>
+              <p className="text-xs text-muted">{advisor.bio}</p>
             </motion.div>
           ))}
         </motion.div>

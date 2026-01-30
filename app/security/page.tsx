@@ -90,19 +90,19 @@ export default function SecurityPage() {
           className="glass-card-hover flex flex-col gap-6 bg-gradient-to-r from-navy-900/90 via-navy-900/95 to-navy-900/90 px-6 py-8 sm:px-8 lg:flex-row lg:items-center lg:justify-between"
         >
           <div className="flex items-start gap-4">
-            <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-accent-500/10 text-accent-300">
+            <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-badge-accent text-accent-light">
               <Shield className="h-7 w-7" />
             </div>
             <div className="space-y-3">
               <p className="section-heading">Security & Privacy</p>
-              <h1 className="heading-lg text-navy-50">Security & privacy at Alnex.ai</h1>
-              <p className="text-sm text-navy-300 md:text-base">
+              <h1 className="heading-lg text-heading">Security & privacy at Alnex.ai</h1>
+              <p className="text-sm text-muted md:text-base">
                 Underwriting data is among the most sensitive information a lender holds. Alnex.ai is built with
                 security, tenant isolation, and regulatory alignment at the core of our architecture.
               </p>
             </div>
           </div>
-          <div className="grid gap-3 text-xs text-navy-200 sm:grid-cols-2 lg:w-1/2">
+          <div className="grid gap-3 text-xs text-body sm:grid-cols-2 lg:w-1/2">
             {[
               'AES-256 encryption in transit & at rest',
               'No ungoverned third-party data sharing',
@@ -111,9 +111,9 @@ export default function SecurityPage() {
             ].map((item) => (
               <div
                 key={item}
-                className="flex items-center gap-2 rounded-full bg-navy-900/80 px-3 py-2"
+                className="badge flex items-center gap-2 px-3 py-2"
               >
-                <CheckCircle2 className="h-3.5 w-3.5 text-accent-400" />
+                <CheckCircle2 className="h-3.5 w-3.5 text-accent-light" />
                 <span>{item}</span>
               </div>
             ))}
@@ -131,8 +131,8 @@ export default function SecurityPage() {
       >
         <motion.div variants={fadeInUp} className="mb-8 max-w-3xl">
           <p className="section-heading">Security Features</p>
-          <h2 className="heading-md text-navy-50">Controls designed for regulated financial institutions</h2>
-          <p className="mt-3 text-sm text-navy-300">
+          <h2 className="heading-md text-heading">Controls designed for regulated financial institutions</h2>
+          <p className="mt-3 text-sm text-muted">
             From encryption and tenant isolation to access controls and audit trails, Alnex.ai is engineered for
             lenders who operate under GLBA, FCRA, and other regulatory frameworks.
           </p>
@@ -203,12 +203,12 @@ export default function SecurityPage() {
               variants={fadeInUp}
               className="glass-card-hover flex flex-col gap-3 p-5"
             >
-              <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-accent-500/10 text-accent-300">
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-badge-accent text-accent-light">
                 <item.icon className="h-5 w-5" />
               </div>
               <div>
-                <h3 className="text-sm font-semibold text-navy-50">{item.title}</h3>
-                <ul className="mt-3 space-y-1 text-xs text-navy-300">
+                <h3 className="text-sm font-semibold text-heading">{item.title}</h3>
+                <ul className="mt-3 space-y-1 text-xs text-muted">
                   {item.bullets.map((b) => (
                     <li key={b} className="flex gap-2">
                       <span className="mt-[6px] h-1 w-1 rounded-full bg-accent-400" />
@@ -232,8 +232,8 @@ export default function SecurityPage() {
       >
         <motion.div variants={fadeInUp} className="mb-6 max-w-3xl">
           <p className="section-heading">Compliance Alignment</p>
-          <h2 className="heading-md text-navy-50">Supporting your regulatory obligations</h2>
-          <p className="mt-3 text-sm text-navy-300">
+          <h2 className="heading-md text-heading">Supporting your regulatory obligations</h2>
+          <p className="mt-3 text-sm text-muted">
             Alnex.ai is designed to operate within your compliance program, providing the technical controls needed to
             support GLBA, FCRA, CCPA, SOC 2, and other frameworks.
           </p>
@@ -254,11 +254,11 @@ export default function SecurityPage() {
               variants={fadeInUp}
               className="glass-card-hover p-4 text-sm"
             >
-              <div className="mb-2 inline-flex items-center gap-2 rounded-full bg-navy-900/70 px-3 py-1 text-xs text-accent-300">
+              <div className="badge-accent mb-2 inline-flex items-center gap-2 px-3 py-1 text-xs">
                 <Shield className="h-3.5 w-3.5" />
                 {item.code}
               </div>
-              <p className="text-xs text-navy-300">{item.desc}</p>
+              <p className="text-xs text-muted">{item.desc}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -275,8 +275,8 @@ export default function SecurityPage() {
         <div className="grid gap-8 lg:grid-cols-2">
           <motion.div variants={fadeInUp} className="space-y-4">
             <p className="section-heading">Data Protection</p>
-            <h2 className="heading-md text-navy-50">Protecting underwriting data end-to-end</h2>
-            <p className="text-sm text-navy-300">
+            <h2 className="heading-md text-heading">Protecting underwriting data end-to-end</h2>
+            <p className="text-sm text-muted">
               From the moment documents enter the platform to the generation of final underwriting reports, your data is
               governed by strict access controls, encryption, and monitoring.
             </p>
@@ -291,10 +291,10 @@ export default function SecurityPage() {
             className="glass-card-hover space-y-3 p-5 text-sm"
           >
             <div className="flex items-center gap-2">
-              <Globe className="h-4 w-4 text-accent-300" />
-              <p className="font-semibold text-navy-50">Data protection checkpoints</p>
+              <Globe className="h-4 w-4 text-accent-light" />
+              <p className="font-semibold text-heading">Data protection checkpoints</p>
             </div>
-            <ul className="space-y-2 text-xs text-navy-300">
+            <ul className="space-y-2 text-xs text-muted">
               {[
                 'Secure document ingestion from LOS, SFTP, or direct upload.',
                 'Automated classification and redaction options for sensitive fields.',
@@ -322,8 +322,8 @@ export default function SecurityPage() {
       >
         <motion.div variants={fadeInUp} className="mb-6 max-w-3xl">
           <p className="section-heading">Security FAQ</p>
-          <h2 className="heading-md text-navy-50">Answers for security, risk, and compliance teams</h2>
-          <p className="mt-3 text-sm text-navy-300">
+          <h2 className="heading-md text-heading">Answers for security, risk, and compliance teams</h2>
+          <p className="mt-3 text-sm text-muted">
             These are the most common questions we receive from security and risk stakeholders evaluating Alnex.ai.
           </p>
         </motion.div>
@@ -343,12 +343,12 @@ export default function SecurityPage() {
                 <button
                   type="button"
                   onClick={() => setOpenIndex(open ? null : idx)}
-                  className="flex w-full items-center justify-between px-4 py-3 text-left text-sm text-navy-100"
+                  className="flex w-full items-center justify-between px-4 py-3 text-left text-sm text-body"
                 >
                   <span>{item.q}</span>
                   <span
-                    className={`inline-flex h-6 w-6 items-center justify-center rounded-full border border-navy-700 text-[11px] ${
-                      open ? 'bg-accent-500/10 text-accent-300' : 'text-navy-300'
+                    className={`inline-flex h-6 w-6 items-center justify-center rounded-full border border-card text-[11px] ${
+                      open ? 'bg-badge-accent text-accent-light' : 'text-muted'
                     }`}
                   >
                     {open ? '−' : '+'}

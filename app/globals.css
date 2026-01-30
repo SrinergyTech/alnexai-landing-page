@@ -12,12 +12,12 @@
 
 @layer base {
   body {
-    @apply bg-navy-950 text-navy-100 antialiased;
+    @apply bg-white dark:bg-navy-950 text-navy-900 dark:text-navy-100 antialiased;
     font-family: var(--font-inter);
   }
 
   ::selection {
-    @apply bg-accent-500/30 text-white;
+    @apply bg-accent-500/30 text-white dark:text-white;
   }
 }
 
@@ -27,11 +27,11 @@
   }
 
   .glass-card {
-    @apply bg-navy-900/50 backdrop-blur-xl border border-navy-700/50 shadow-xl rounded-2xl;
+    @apply bg-white/80 dark:bg-navy-900/50 backdrop-blur-xl border border-navy-200/50 dark:border-navy-700/50 shadow-xl rounded-2xl;
   }
 
   .glass-card-hover {
-    @apply glass-card transition-all duration-500 hover:bg-navy-800/60 hover:border-accent-500/30 hover:shadow-accent-500/10 hover:shadow-2xl;
+    @apply glass-card transition-all duration-500 hover:bg-navy-50/90 dark:hover:bg-navy-800/60 hover:border-accent-500/30 dark:hover:border-accent-500/30 hover:shadow-accent-500/10 dark:hover:shadow-accent-500/10 hover:shadow-2xl;
   }
 
   .btn-primary {
@@ -39,11 +39,11 @@
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-accent-300 border-2 border-accent-500/50 rounded-xl transition-all duration-300 hover:bg-accent-500/10 hover:border-accent-400;
+    @apply inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-accent-600 dark:text-accent-300 border-2 border-accent-500/50 rounded-xl transition-all duration-300 hover:bg-accent-500/10 dark:hover:bg-accent-500/10 hover:border-accent-500 dark:hover:border-accent-400;
   }
 
   .section-heading {
-    @apply text-sm font-semibold uppercase tracking-widest text-accent-400;
+    @apply text-sm font-semibold uppercase tracking-widest text-accent-600 dark:text-accent-400;
   }
 
   .heading-xl {
@@ -59,7 +59,117 @@
   }
 
   .nav-link {
-    @apply relative text-navy-300 font-medium transition-colors duration-300 hover:text-white;
+    @apply relative text-navy-600 dark:text-navy-300 font-medium transition-colors duration-300 hover:text-navy-900 dark:hover:text-white;
+  }
+
+  /* Text Color Utilities */
+  .text-heading {
+    @apply text-navy-900 dark:text-navy-50;
+  }
+
+  .text-body {
+    @apply text-navy-700 dark:text-navy-200;
+  }
+
+  .text-muted {
+    @apply text-navy-600 dark:text-navy-300;
+  }
+
+  .text-subtle {
+    @apply text-navy-500 dark:text-navy-400;
+  }
+
+  .text-accent-light {
+    @apply text-accent-600 dark:text-accent-300;
+  }
+
+  .text-accent-subtle {
+    @apply text-accent-500 dark:text-accent-200;
+  }
+
+  /* Background Utilities */
+  .bg-card {
+    @apply bg-white/80 dark:bg-navy-900/50;
+  }
+
+  .bg-card-solid {
+    @apply bg-white dark:bg-navy-900;
+  }
+
+  .bg-card-hover {
+    @apply bg-navy-50/90 dark:bg-navy-800/60;
+  }
+
+  .bg-badge {
+    @apply bg-navy-100/70 dark:bg-navy-900/70;
+  }
+
+  .bg-badge-accent {
+    @apply bg-accent-500/10 dark:bg-accent-500/10;
+  }
+
+  .bg-overlay {
+    @apply bg-white/95 dark:bg-navy-950/95;
+  }
+
+  /* Border Utilities */
+  .border-card {
+    @apply border-navy-200/50 dark:border-navy-700/50;
+  }
+
+  .border-subtle {
+    @apply border-navy-300/50 dark:border-navy-800/70;
+  }
+
+  .border-accent-subtle {
+    @apply border-accent-500/30 dark:border-accent-500/30;
+  }
+
+  /* Badge Component */
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-full px-2 py-1 text-xs font-medium bg-badge border border-card text-muted;
+  }
+
+  .badge-accent {
+    @apply badge bg-badge-accent border-accent-subtle text-accent-light;
+  }
+
+  /* Card Variants */
+  .card {
+    @apply rounded-xl bg-card border border-card p-3;
+  }
+
+  .card-hover {
+    @apply card transition-all duration-300 hover:bg-card-hover;
+  }
+
+  .card-dark {
+    @apply rounded-xl bg-navy-100/60 dark:bg-navy-900/60 border border-card p-3;
+  }
+
+  /* Floating Badge */
+  .floating-badge {
+    @apply glass-card border-accent-subtle bg-overlay px-3 py-2 text-[11px] text-body;
+  }
+
+  /* Hero Badge */
+  .hero-badge {
+    @apply inline-flex items-center gap-2 rounded-full border border-accent-subtle bg-badge px-3 py-1 text-xs font-medium text-accent-light;
+  }
+
+  /* Stats Card */
+  .stats-card {
+    @apply glass-card-hover p-4;
+  }
+
+  /* Feature Card */
+  .feature-card {
+    @apply glass-card-hover flex flex-col gap-3 p-5;
+  }
+
+  /* Testimonial Card */
+  .testimonial-card {
+    @apply relative flex flex-col gap-3 rounded-2xl border border-subtle bg-card-solid p-4;
   }
 }
 
@@ -71,8 +181,8 @@ html {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  @apply bg-navy-900;
+  @apply bg-navy-100 dark:bg-navy-900;
 }
 ::-webkit-scrollbar-thumb {
-  @apply bg-navy-700 rounded-full;
+  @apply bg-navy-300 dark:bg-navy-700 rounded-full;
 }
