@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function TermsOfService() {
   return (
-    <div className="min-h-screen bg-navy-950">
+    <div className="min-h-screen bg-white dark:bg-navy-950">
       <div className="pt-24 pb-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header Section */}
@@ -21,38 +21,38 @@ export default function TermsOfService() {
               Back to Home
             </Link>
             <div className="border-l-4 border-accent-500 pl-6">
-              <h1 className="heading-lg text-navy-50 mb-3">Terms of Service</h1>
-              <p className="text-navy-300 text-base">Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+              <h1 className="heading-lg text-navy-950 dark:text-navy-50 mb-3">Terms of Service</h1>
+              <p className="text-navy-600 dark:text-navy-300 text-base">Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
             </div>
           </div>
 
           {/* Content */}
           <div className="glass-card p-8 sm:p-12">
-            <section className="mb-12 pb-8 border-b border-navy-700/50">
-              <h2 className="text-3xl font-bold text-navy-50 mb-6 flex items-center">
+            <section className="mb-12 pb-8 border-b border-navy-200/50 dark:border-navy-700/50">
+              <h2 className="text-3xl font-bold text-navy-950 dark:text-navy-50 mb-6 flex items-center">
                 <span className="bg-accent-500/20 text-accent-300 rounded-lg px-3 py-1 text-base font-semibold mr-4">1</span>
                 Agreement to Terms
               </h2>
               <div className="ml-16 space-y-4">
-                <p className="text-navy-200 leading-relaxed text-base">
+                <p className="text-navy-700 dark:text-navy-200 leading-relaxed text-base">
                   By accessing or using Alnex.ai ("we," "us," or "our") and our mortgage underwriter assistant platform (the "Service"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, you may not access or use our Service.
                 </p>
-                <p className="text-navy-200 leading-relaxed text-base">
+                <p className="text-navy-700 dark:text-navy-200 leading-relaxed text-base">
                   These Terms constitute a legally binding agreement between you and Alnex.ai. We reserve the right to modify these Terms at any time, and such modifications will be effective immediately upon posting. Your continued use of the Service after any modifications constitutes your acceptance of the modified Terms.
                 </p>
               </div>
             </section>
 
-            <section className="mb-12 pb-8 border-b border-navy-700/50">
-              <h2 className="text-3xl font-bold text-navy-50 mb-6 flex items-center">
+            <section className="mb-12 pb-8 border-b border-navy-200/50 dark:border-navy-700/50">
+              <h2 className="text-3xl font-bold text-navy-950 dark:text-navy-50 mb-6 flex items-center">
                 <span className="bg-accent-500/20 text-accent-300 rounded-lg px-3 py-1 text-base font-semibold mr-4">2</span>
                 Description of Service
               </h2>
               <div className="ml-16 space-y-4">
-                <p className="text-navy-200 leading-relaxed text-base">
+                <p className="text-navy-700 dark:text-navy-200 leading-relaxed text-base">
                   Alnex.ai provides an AI-powered mortgage underwriter assistant platform that:
                 </p>
-                <ul className="list-disc pl-6 space-y-3 text-navy-200 text-base">
+                <ul className="list-disc pl-6 space-y-3 text-navy-700 dark:text-navy-200 text-base">
                   <li>Facilitates mortgage application processing and underwriting</li>
                   <li>Provides intelligent analysis and risk assessment for mortgage applications</li>
                   <li>Connects borrowers with lenders and financial institutions</li>
@@ -60,24 +60,24 @@ export default function TermsOfService() {
                   <li>Assists with document collection, verification, and processing</li>
                   <li>Provides mortgage-related educational resources and guidance</li>
                 </ul>
-                <p className="text-navy-200 leading-relaxed text-base mt-6">
+                <p className="text-navy-700 dark:text-navy-200 leading-relaxed text-base mt-6">
                   We act as an intermediary platform and do not directly originate, fund, or service mortgages. All mortgage decisions, including approval, denial, rates, and terms, are made solely by the participating lenders and financial institutions.
                 </p>
               </div>
             </section>
 
-            <section className="mb-12 pb-8 border-b border-navy-700/50">
-              <h2 className="text-3xl font-bold text-navy-50 mb-6 flex items-center">
+            <section className="mb-12 pb-8 border-b border-navy-200/50 dark:border-navy-700/50">
+              <h2 className="text-3xl font-bold text-navy-950 dark:text-navy-50 mb-6 flex items-center">
                 <span className="bg-accent-500/20 text-accent-300 rounded-lg px-3 py-1 text-base font-semibold mr-4">3</span>
                 Eligibility and Account Registration
               </h2>
               <div className="ml-16 space-y-6">
                 <div>
-                  <h3 className="text-2xl font-semibold text-navy-50 mb-4">3.1 Eligibility Requirements</h3>
-                  <p className="text-navy-200 leading-relaxed mb-4 text-base">
+                  <h3 className="text-2xl font-semibold text-navy-950 dark:text-navy-50 mb-4">3.1 Eligibility Requirements</h3>
+                  <p className="text-navy-700 dark:text-navy-200 leading-relaxed mb-4 text-base">
                     To use our Service, you must:
                   </p>
-                  <ul className="list-disc pl-6 space-y-3 text-navy-200 text-base">
+                  <ul className="list-disc pl-6 space-y-3 text-navy-700 dark:text-navy-200 text-base">
                     <li>Be at least 18 years of age</li>
                     <li>Have the legal capacity to enter into binding agreements</li>
                     <li>Reside in a jurisdiction where our Service is available</li>
@@ -87,11 +87,11 @@ export default function TermsOfService() {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-semibold text-navy-50 mb-4">3.2 Account Responsibilities</h3>
-                  <p className="text-navy-200 leading-relaxed mb-4 text-base">
+                  <h3 className="text-2xl font-semibold text-navy-950 dark:text-navy-50 mb-4">3.2 Account Responsibilities</h3>
+                  <p className="text-navy-700 dark:text-navy-200 leading-relaxed mb-4 text-base">
                     You are responsible for:
                   </p>
-                  <ul className="list-disc pl-6 space-y-3 text-navy-200 text-base">
+                  <ul className="list-disc pl-6 space-y-3 text-navy-700 dark:text-navy-200 text-base">
                     <li>Maintaining the confidentiality of your account password</li>
                     <li>All activities that occur under your account</li>
                     <li>Notifying us immediately of any unauthorized access</li>
@@ -101,18 +101,18 @@ export default function TermsOfService() {
               </div>
             </section>
 
-            <section className="mb-12 pb-8 border-b border-navy-700/50">
-              <h2 className="text-3xl font-bold text-navy-50 mb-6 flex items-center">
+            <section className="mb-12 pb-8 border-b border-navy-200/50 dark:border-navy-700/50">
+              <h2 className="text-3xl font-bold text-navy-950 dark:text-navy-50 mb-6 flex items-center">
                 <span className="bg-accent-500/20 text-accent-300 rounded-lg px-3 py-1 text-base font-semibold mr-4">4</span>
                 Use of Service
               </h2>
               <div className="ml-16 space-y-6">
                 <div>
-                  <h3 className="text-2xl font-semibold text-navy-50 mb-4">4.1 Permitted Use</h3>
-                  <p className="text-navy-200 leading-relaxed mb-4 text-base">
+                  <h3 className="text-2xl font-semibold text-navy-950 dark:text-navy-50 mb-4">4.1 Permitted Use</h3>
+                  <p className="text-navy-700 dark:text-navy-200 leading-relaxed mb-4 text-base">
                     You may use our Service solely for lawful purposes related to mortgage application and processing. You agree to:
                   </p>
-                  <ul className="list-disc pl-6 space-y-3 text-navy-200 text-base">
+                  <ul className="list-disc pl-6 space-y-3 text-navy-700 dark:text-navy-200 text-base">
                     <li>Provide truthful and accurate information</li>
                     <li>Use the Service in compliance with all applicable laws and regulations</li>
                     <li>Respect the intellectual property rights of Alnex.ai and third parties</li>
@@ -121,11 +121,11 @@ export default function TermsOfService() {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-semibold text-navy-50 mb-4">4.2 Prohibited Activities</h3>
-                  <p className="text-navy-200 leading-relaxed mb-4 text-base">
+                  <h3 className="text-2xl font-semibold text-navy-950 dark:text-navy-50 mb-4">4.2 Prohibited Activities</h3>
+                  <p className="text-navy-700 dark:text-navy-200 leading-relaxed mb-4 text-base">
                     You agree NOT to:
                   </p>
-                  <ul className="list-disc pl-6 space-y-3 text-navy-200 text-base">
+                  <ul className="list-disc pl-6 space-y-3 text-navy-700 dark:text-navy-200 text-base">
                     <li>Provide false, misleading, or fraudulent information</li>
                     <li>Attempt to gain unauthorized access to the Service or other accounts</li>
                     <li>Use automated systems (bots, scrapers) to access the Service</li>
@@ -139,18 +139,18 @@ export default function TermsOfService() {
               </div>
             </section>
 
-            <section className="mb-12 pb-8 border-b border-navy-700/50">
-              <h2 className="text-3xl font-bold text-navy-50 mb-6 flex items-center">
+            <section className="mb-12 pb-8 border-b border-navy-200/50 dark:border-navy-700/50">
+              <h2 className="text-3xl font-bold text-navy-950 dark:text-navy-50 mb-6 flex items-center">
                 <span className="bg-accent-500/20 text-accent-300 rounded-lg px-3 py-1 text-base font-semibold mr-4">5</span>
                 Mortgage Application Process
               </h2>
               <div className="ml-16 space-y-6">
                 <div>
-                  <h3 className="text-2xl font-semibold text-navy-50 mb-4">5.1 Application Submission</h3>
-                  <p className="text-navy-200 leading-relaxed mb-4 text-base">
+                  <h3 className="text-2xl font-semibold text-navy-950 dark:text-navy-50 mb-4">5.1 Application Submission</h3>
+                  <p className="text-navy-700 dark:text-navy-200 leading-relaxed mb-4 text-base">
                     When you submit a mortgage application through our platform:
                   </p>
-                  <ul className="list-disc pl-6 space-y-3 text-navy-200 text-base">
+                  <ul className="list-disc pl-6 space-y-3 text-navy-700 dark:text-navy-200 text-base">
                     <li>You authorize us to share your information with participating lenders</li>
                     <li>You consent to credit checks and background verification</li>
                     <li>You understand that application does not guarantee mortgage approval</li>
@@ -159,11 +159,11 @@ export default function TermsOfService() {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-semibold text-navy-50 mb-4">5.2 Lender Relationships</h3>
-                  <p className="text-navy-200 leading-relaxed mb-4 text-base">
+                  <h3 className="text-2xl font-semibold text-navy-950 dark:text-navy-50 mb-4">5.2 Lender Relationships</h3>
+                  <p className="text-navy-700 dark:text-navy-200 leading-relaxed mb-4 text-base">
                     We facilitate connections between borrowers and lenders but are not a party to any mortgage agreement. The relationship between you and any lender is governed by separate agreements. We are not responsible for:
                   </p>
-                  <ul className="list-disc pl-6 space-y-3 text-navy-200 text-base">
+                  <ul className="list-disc pl-6 space-y-3 text-navy-700 dark:text-navy-200 text-base">
                     <li>Lender decisions regarding approval, denial, rates, or terms</li>
                     <li>Lender practices, policies, or customer service</li>
                     <li>Mortgage servicing or loan modifications after origination</li>
@@ -172,11 +172,11 @@ export default function TermsOfService() {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-semibold text-navy-50 mb-4">5.3 Fees and Costs</h3>
-                  <p className="text-navy-200 leading-relaxed mb-4 text-base">
+                  <h3 className="text-2xl font-semibold text-navy-950 dark:text-navy-50 mb-4">5.3 Fees and Costs</h3>
+                  <p className="text-navy-700 dark:text-navy-200 leading-relaxed mb-4 text-base">
                     Our Service may be provided free of charge to borrowers. However:
                   </p>
-                  <ul className="list-disc pl-6 space-y-3 text-navy-200 text-base">
+                  <ul className="list-disc pl-6 space-y-3 text-navy-700 dark:text-navy-200 text-base">
                     <li>Lenders may charge application fees, origination fees, and other costs</li>
                     <li>We may receive compensation from lenders for successful referrals</li>
                     <li>All fees and costs will be disclosed in accordance with applicable regulations</li>
@@ -186,39 +186,39 @@ export default function TermsOfService() {
               </div>
             </section>
 
-            <section className="mb-12 pb-8 border-b border-navy-700/50">
-              <h2 className="text-3xl font-bold text-navy-50 mb-6 flex items-center">
+            <section className="mb-12 pb-8 border-b border-navy-200/50 dark:border-navy-700/50">
+              <h2 className="text-3xl font-bold text-navy-950 dark:text-navy-50 mb-6 flex items-center">
                 <span className="bg-accent-500/20 text-accent-300 rounded-lg px-3 py-1 text-base font-semibold mr-4">6</span>
                 AI-Powered Services
               </h2>
               <div className="ml-16 space-y-4">
-                <p className="text-navy-200 leading-relaxed text-base">
+                <p className="text-navy-700 dark:text-navy-200 leading-relaxed text-base">
                   Our Service utilizes artificial intelligence and machine learning to:
                 </p>
-                <ul className="list-disc pl-6 space-y-3 text-navy-200 text-base">
+                <ul className="list-disc pl-6 space-y-3 text-navy-700 dark:text-navy-200 text-base">
                   <li>Analyze mortgage applications and assess risk</li>
                   <li>Provide recommendations and rate comparisons</li>
                   <li>Automate document processing and verification</li>
                   <li>Generate insights and predictions</li>
                 </ul>
                 <div className="bg-gold-500/10 border-l-4 border-gold-500/50 p-6 rounded-r-lg mt-6">
-                  <p className="text-navy-200 leading-relaxed text-base">
+                  <p className="text-navy-700 dark:text-navy-200 leading-relaxed text-base">
                     <strong className="text-gold-400">Important:</strong> AI-generated recommendations are for informational purposes only and do not constitute financial, legal, or professional advice. All mortgage decisions are made by human underwriters and lenders. You should consult with qualified professionals before making financial decisions.
                   </p>
                 </div>
               </div>
             </section>
 
-            <section className="mb-12 pb-8 border-b border-navy-700/50">
-              <h2 className="text-3xl font-bold text-navy-50 mb-6 flex items-center">
+            <section className="mb-12 pb-8 border-b border-navy-200/50 dark:border-navy-700/50">
+              <h2 className="text-3xl font-bold text-navy-950 dark:text-navy-50 mb-6 flex items-center">
                 <span className="bg-accent-500/20 text-accent-300 rounded-lg px-3 py-1 text-base font-semibold mr-4">7</span>
                 Intellectual Property
               </h2>
               <div className="ml-16">
-                <p className="text-navy-200 leading-relaxed mb-4 text-base">
+                <p className="text-navy-700 dark:text-navy-200 leading-relaxed mb-4 text-base">
                   The Service, including all content, features, functionality, software, and technology, is owned by Alnex.ai and protected by copyright, trademark, and other intellectual property laws. You may not:
                 </p>
-                <ul className="list-disc pl-6 space-y-3 text-navy-200 text-base">
+                <ul className="list-disc pl-6 space-y-3 text-navy-700 dark:text-navy-200 text-base">
                   <li>Copy, modify, or create derivative works of the Service</li>
                   <li>Use our trademarks, logos, or branding without permission</li>
                   <li>Remove or alter any copyright or proprietary notices</li>
@@ -227,18 +227,18 @@ export default function TermsOfService() {
               </div>
             </section>
 
-            <section className="mb-12 pb-8 border-b border-navy-700/50">
-              <h2 className="text-3xl font-bold text-navy-50 mb-6 flex items-center">
+            <section className="mb-12 pb-8 border-b border-navy-200/50 dark:border-navy-700/50">
+              <h2 className="text-3xl font-bold text-navy-950 dark:text-navy-50 mb-6 flex items-center">
                 <span className="bg-accent-500/20 text-accent-300 rounded-lg px-3 py-1 text-base font-semibold mr-4">8</span>
                 Disclaimers and Limitations of Liability
               </h2>
               <div className="ml-16 space-y-6">
                 <div>
-                  <h3 className="text-2xl font-semibold text-navy-50 mb-4">8.1 Service Availability</h3>
-                  <p className="text-navy-200 leading-relaxed mb-4 text-base">
+                  <h3 className="text-2xl font-semibold text-navy-950 dark:text-navy-50 mb-4">8.1 Service Availability</h3>
+                  <p className="text-navy-700 dark:text-navy-200 leading-relaxed mb-4 text-base">
                     We strive to provide reliable service but do not guarantee:
                   </p>
-                  <ul className="list-disc pl-6 space-y-3 text-navy-200 text-base">
+                  <ul className="list-disc pl-6 space-y-3 text-navy-700 dark:text-navy-200 text-base">
                     <li>Uninterrupted or error-free operation</li>
                     <li>Immediate processing of applications</li>
                     <li>Availability of specific mortgage products or rates</li>
@@ -247,31 +247,31 @@ export default function TermsOfService() {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-semibold text-navy-50 mb-4">8.2 No Warranty</h3>
-                  <p className="text-navy-200 leading-relaxed text-base italic">
+                  <h3 className="text-2xl font-semibold text-navy-950 dark:text-navy-50 mb-4">8.2 No Warranty</h3>
+                  <p className="text-navy-700 dark:text-navy-200 leading-relaxed text-base italic">
                     THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-semibold text-navy-50 mb-4">8.3 Limitation of Liability</h3>
-                  <p className="text-navy-200 leading-relaxed text-base italic">
+                  <h3 className="text-2xl font-semibold text-navy-950 dark:text-navy-50 mb-4">8.3 Limitation of Liability</h3>
+                  <p className="text-navy-700 dark:text-navy-200 leading-relaxed text-base italic">
                     TO THE MAXIMUM EXTENT PERMITTED BY LAW, ALNEX.AI SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, OR USE, ARISING OUT OF OR RELATED TO YOUR USE OF THE SERVICE.
                   </p>
                 </div>
               </div>
             </section>
 
-            <section className="mb-12 pb-8 border-b border-navy-700/50">
-              <h2 className="text-3xl font-bold text-navy-50 mb-6 flex items-center">
+            <section className="mb-12 pb-8 border-b border-navy-200/50 dark:border-navy-700/50">
+              <h2 className="text-3xl font-bold text-navy-950 dark:text-navy-50 mb-6 flex items-center">
                 <span className="bg-accent-500/20 text-accent-300 rounded-lg px-3 py-1 text-base font-semibold mr-4">9</span>
                 Indemnification
               </h2>
               <div className="ml-16">
-                <p className="text-navy-200 leading-relaxed mb-4 text-base">
+                <p className="text-navy-700 dark:text-navy-200 leading-relaxed mb-4 text-base">
                   You agree to indemnify, defend, and hold harmless Alnex.ai, its affiliates, officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses (including reasonable attorney fees) arising out of or related to:
                 </p>
-                <ul className="list-disc pl-6 space-y-3 text-navy-200 text-base">
+                <ul className="list-disc pl-6 space-y-3 text-navy-700 dark:text-navy-200 text-base">
                   <li>Your use of the Service</li>
                   <li>Your violation of these Terms</li>
                   <li>Your violation of any rights of another party</li>
@@ -280,16 +280,16 @@ export default function TermsOfService() {
               </div>
             </section>
 
-            <section className="mb-12 pb-8 border-b border-navy-700/50">
-              <h2 className="text-3xl font-bold text-navy-50 mb-6 flex items-center">
+            <section className="mb-12 pb-8 border-b border-navy-200/50 dark:border-navy-700/50">
+              <h2 className="text-3xl font-bold text-navy-950 dark:text-navy-50 mb-6 flex items-center">
                 <span className="bg-accent-500/20 text-accent-300 rounded-lg px-3 py-1 text-base font-semibold mr-4">10</span>
                 Compliance with Laws
               </h2>
               <div className="ml-16">
-                <p className="text-navy-200 leading-relaxed mb-4 text-base">
+                <p className="text-navy-700 dark:text-navy-200 leading-relaxed mb-4 text-base">
                   You agree to comply with all applicable federal, state, and local laws and regulations, including but not limited to:
                 </p>
-                <ul className="list-disc pl-6 space-y-3 text-navy-200 text-base">
+                <ul className="list-disc pl-6 space-y-3 text-navy-700 dark:text-navy-200 text-base">
                   <li>Truth in Lending Act (TILA)</li>
                   <li>Real Estate Settlement Procedures Act (RESPA)</li>
                   <li>Equal Credit Opportunity Act (ECOA)</li>
@@ -300,72 +300,72 @@ export default function TermsOfService() {
               </div>
             </section>
 
-            <section className="mb-12 pb-8 border-b border-navy-700/50">
-              <h2 className="text-3xl font-bold text-navy-50 mb-6 flex items-center">
+            <section className="mb-12 pb-8 border-b border-navy-200/50 dark:border-navy-700/50">
+              <h2 className="text-3xl font-bold text-navy-950 dark:text-navy-50 mb-6 flex items-center">
                 <span className="bg-accent-500/20 text-accent-300 rounded-lg px-3 py-1 text-base font-semibold mr-4">11</span>
                 Termination
               </h2>
               <div className="ml-16 space-y-4">
-                <p className="text-navy-200 leading-relaxed text-base">
+                <p className="text-navy-700 dark:text-navy-200 leading-relaxed text-base">
                   We may terminate or suspend your access to the Service immediately, without prior notice, for any reason, including:
                 </p>
-                <ul className="list-disc pl-6 space-y-3 text-navy-200 text-base">
+                <ul className="list-disc pl-6 space-y-3 text-navy-700 dark:text-navy-200 text-base">
                   <li>Violation of these Terms</li>
                   <li>Fraudulent or illegal activity</li>
                   <li>Provision of false information</li>
                   <li>At our sole discretion</li>
                 </ul>
-                <p className="text-navy-200 leading-relaxed text-base mt-6">
+                <p className="text-navy-700 dark:text-navy-200 leading-relaxed text-base mt-6">
                   You may terminate your account at any time by contacting us. Upon termination, your right to use the Service will cease immediately.
                 </p>
               </div>
             </section>
 
-            <section className="mb-12 pb-8 border-b border-navy-700/50">
-              <h2 className="text-3xl font-bold text-navy-50 mb-6 flex items-center">
+            <section className="mb-12 pb-8 border-b border-navy-200/50 dark:border-navy-700/50">
+              <h2 className="text-3xl font-bold text-navy-950 dark:text-navy-50 mb-6 flex items-center">
                 <span className="bg-accent-500/20 text-accent-300 rounded-lg px-3 py-1 text-base font-semibold mr-4">12</span>
                 Dispute Resolution
               </h2>
               <div className="ml-16 space-y-6">
                 <div>
-                  <h3 className="text-2xl font-semibold text-navy-50 mb-4">12.1 Governing Law</h3>
-                  <p className="text-navy-200 leading-relaxed text-base">
+                  <h3 className="text-2xl font-semibold text-navy-950 dark:text-navy-50 mb-4">12.1 Governing Law</h3>
+                  <p className="text-navy-700 dark:text-navy-200 leading-relaxed text-base">
                     These Terms shall be governed by and construed in accordance with the laws of [Your State/Country], without regard to its conflict of law provisions.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-semibold text-navy-50 mb-4">12.2 Arbitration</h3>
-                  <p className="text-navy-200 leading-relaxed text-base">
+                  <h3 className="text-2xl font-semibold text-navy-950 dark:text-navy-50 mb-4">12.2 Arbitration</h3>
+                  <p className="text-navy-700 dark:text-navy-200 leading-relaxed text-base">
                     Any disputes arising out of or relating to these Terms or the Service shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association, except where prohibited by law.
                   </p>
                 </div>
               </div>
             </section>
 
-            <section className="mb-12 pb-8 border-b border-navy-700/50">
-              <h2 className="text-3xl font-bold text-navy-50 mb-6 flex items-center">
+            <section className="mb-12 pb-8 border-b border-navy-200/50 dark:border-navy-700/50">
+              <h2 className="text-3xl font-bold text-navy-950 dark:text-navy-50 mb-6 flex items-center">
                 <span className="bg-accent-500/20 text-accent-300 rounded-lg px-3 py-1 text-base font-semibold mr-4">13</span>
                 Miscellaneous
               </h2>
               <div className="ml-16 space-y-6">
                 <div>
-                  <h3 className="text-2xl font-semibold text-navy-50 mb-4">13.1 Entire Agreement</h3>
-                  <p className="text-navy-200 leading-relaxed text-base">
+                  <h3 className="text-2xl font-semibold text-navy-950 dark:text-navy-50 mb-4">13.1 Entire Agreement</h3>
+                  <p className="text-navy-700 dark:text-navy-200 leading-relaxed text-base">
                     These Terms, together with our Privacy Policy, constitute the entire agreement between you and Alnex.ai regarding the Service.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-semibold text-navy-50 mb-4">13.2 Severability</h3>
-                  <p className="text-navy-200 leading-relaxed text-base">
+                  <h3 className="text-2xl font-semibold text-navy-950 dark:text-navy-50 mb-4">13.2 Severability</h3>
+                  <p className="text-navy-700 dark:text-navy-200 leading-relaxed text-base">
                     If any provision of these Terms is found to be unenforceable, the remaining provisions will remain in full effect.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-semibold text-navy-50 mb-4">13.3 Waiver</h3>
-                  <p className="text-navy-200 leading-relaxed text-base">
+                  <h3 className="text-2xl font-semibold text-navy-950 dark:text-navy-50 mb-4">13.3 Waiver</h3>
+                  <p className="text-navy-700 dark:text-navy-200 leading-relaxed text-base">
                     Our failure to enforce any right or provision of these Terms shall not constitute a waiver of such right or provision.
                   </p>
                 </div>
@@ -373,19 +373,19 @@ export default function TermsOfService() {
             </section>
 
             <section className="mb-0">
-              <h2 className="text-3xl font-bold text-navy-50 mb-6 flex items-center">
+              <h2 className="text-3xl font-bold text-navy-950 dark:text-navy-50 mb-6 flex items-center">
                 <span className="bg-accent-500/20 text-accent-300 rounded-lg px-3 py-1 text-base font-semibold mr-4">14</span>
                 Contact Information
               </h2>
               <div className="ml-16">
-                <p className="text-navy-200 leading-relaxed text-base mb-6">
+                <p className="text-navy-700 dark:text-navy-200 leading-relaxed text-base mb-6">
                   If you have questions about these Terms, please contact us:
                 </p>
                 <div className="glass-card p-8 rounded-xl">
-                  <p className="text-navy-50 mb-3 text-xl font-bold">Alnex.ai</p>
-                  <p className="text-navy-200 mb-2 text-base">Email: <a href="mailto:legal@alnex.ai" className="text-accent-400 hover:underline">legal@alnex.ai</a></p>
-                  <p className="text-navy-200 mb-2 text-base">Phone: 1-800-ALNEX-AI</p>
-                  <p className="text-navy-200 text-base">Address: [Your Business Address]</p>
+                  <p className="text-navy-900 dark:text-navy-50 mb-3 text-xl font-bold">Alnex.<span className="text-accent-400">ai</span></p>
+                  <p className="text-navy-700 dark:text-navy-200 mb-2 text-base">Email: <a href="mailto:support@alnex.ai" className="text-accent-400 hover:underline">support@alnex.ai</a></p>
+                  {/* <p className="text-navy-700 dark:text-navy-200 mb-2 text-base">Phone: 1-800-ALNEX-AI</p>
+                  <p className="text-navy-700 dark:text-navy-200 text-base">Address: [Your Business Address]</p> */}
                 </div>
               </div>
             </section>
