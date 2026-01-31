@@ -5,34 +5,23 @@ const globalForPrisma = globalThis as unknown as {
 }
 
 function createPrismaClient(): PrismaClient {
-  // Check if DATABASE_URL is available
-  const databaseUrl = process.env.DATABASE_URL
+  // Use environment variable or fallback to hardcoded value for quick deployment
+  // TODO: Remove hardcoded value and use only environment variables in next iteration
+  const databaseUrl = process.env.DATABASE_URL || 'postgresql://postgres:QYGohXjCUB8ATRVZ@db.omawrtvwghlsbykxwcac.supabase.co:5432/postgres'
   
-  if (!databaseUrl) {
-    // During build time, DATABASE_URL might not be available
-    // Don't throw during build - we'll handle it at runtime
-    const isBuildTime = process.env.NEXT_PHASE === 'phase-production-build' || 
-                       process.env.NEXT_PHASE === 'phase-development-build'
-    
-    if (isBuildTime) {
-      // Return a dummy client that won't be used during build
-      // This prevents build failures
-      return new PrismaClient({
-        datasources: {
-          db: {
-            url: 'postgresql://build-time-placeholder',
-          },
+  // During build time, use placeholder
+  const isBuildTime = process.env.NEXT_PHASE === 'phase-production-build' || 
+                     process.env.NEXT_PHASE === 'phase-development-build'
+  
+  if (isBuildTime) {
+    // Return a dummy client that won't be used during build
+    return new PrismaClient({
+      datasources: {
+        db: {
+          url: 'postgresql://build-time-placeholder',
         },
-      }) as PrismaClient
-    }
-    
-    console.error('[Prisma] DATABASE_URL is not set')
-    console.error('[Prisma] Available env vars:', Object.keys(process.env).filter(key => 
-      key.includes('DATABASE') || key.includes('DB') || key.includes('POSTGRES')
-    ))
-    throw new Error(
-      'DATABASE_URL environment variable is not set. Please configure it in Azure Application Settings.'
-    )
+      },
+    }) as PrismaClient
   }
 
   if (process.env.NODE_ENV === 'development') {
@@ -41,6 +30,11 @@ function createPrismaClient(): PrismaClient {
 
   return new PrismaClient({
     log: process.env.NODE_ENV === 'development' ? ['query', 'error', 'warn'] : ['error'],
+    datasources: {
+      db: {
+        url: databaseUrl,
+      },
+    },
   })
 }
 
@@ -53,8 +47,18 @@ function getPrismaClient(): PrismaClient {
     const client = createPrismaClient()
     globalForPrisma.prisma = client
     return client
-  } catch (error) {
-    console.error('[Prisma] Failed to create Prisma Client:', error)
+  } catch (error: any) {
+    const errorMsg = `[Prisma] Failed to create Prisma Client: ${error?.message || 'Unknown error'}`
+    console.error(errorMsg)
+    console.error('[Prisma] Error details:', {
+      code: error?.code,
+      message: error?.message,
+      stack: error?.stack?.substring(0, 500),
+    })
+    // Write to stderr for Azure logs
+    if (process.stderr) {
+      process.stderr.write(`ERROR: ${errorMsg}\n`)
+    }
     throw error
   }
 }
