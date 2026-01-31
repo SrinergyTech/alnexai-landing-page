@@ -1,7 +1,12 @@
 import { NextResponse } from 'next/server'
-import { prisma } from '@/lib/prisma'
+
+// Mark this route as dynamic to prevent build-time execution
+export const dynamic = 'force-dynamic'
+export const runtime = 'nodejs'
 
 export async function GET() {
+  // Import prisma here to avoid build-time initialization
+  const { prisma } = await import('@/lib/prisma')
   try {
     // Check environment variables
     const hasDatabaseUrl = !!process.env.DATABASE_URL
