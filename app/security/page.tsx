@@ -291,8 +291,8 @@ export default function SecurityPage() {
                   { label: 'At Rest', value: 'AES-256', icon: Database },
                   { label: 'Key Management', value: 'Azure Key Vault', icon: Key },
                 ].map((item) => (
-                  <div key={item.label} className="flex items-center gap-3 rounded-lg bg-navy-900/50 p-3">
-                    <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-navy-800/50">
+                  <div key={item.label} className="flex items-center gap-3 rounded-lg bg-navy-100 dark:bg-navy-900/50 p-3">
+                    <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-accent-100 dark:bg-navy-800/50">
                       <item.icon className="h-5 w-5 text-accent-400" />
                     </div>
                     <div className="flex-1">
@@ -330,7 +330,7 @@ export default function SecurityPage() {
                 ].map((item) => (
                   <div
                     key={item.label}
-                    className="flex flex-col items-center gap-2 rounded-lg bg-navy-900/50 p-4"
+                    className="flex flex-col items-center gap-2 rounded-lg bg-navy-100 dark:bg-navy-900/50 p-4"
                   >
                     <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-badge-accent text-accent-light">
                       <item.icon className="h-5 w-5" />
@@ -417,7 +417,7 @@ export default function SecurityPage() {
                   </span>
                 </button>
                 {open && (
-                  <div className="border-t border-navy-800/60 bg-navy-950/60 px-4 py-3 text-xs text-navy-300">
+                  <div className="border-t border-navy-800/60 bg-navy-50 dark:bg-navy-950/60 px-4 py-3 text-sm text-navy-900 dark:text-navy-300">
                     {item.a}
                   </div>
                 )}
